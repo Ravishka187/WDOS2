@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <meta name="description" content="Home Page">
+       <title>Home</title>
+       <link rel="stylesheet" href="styles.css">
+       <link rel="apple-touch-icon" sizes="180x180" href="Images/Home/apple-touch-icon.png">
+       <link rel="icon" type="image/png" sizes="32x32" href="Images/Home/favicon-32x32.png">
+       <link rel="icon" type="image/png" sizes="16x16" href="Images/Home/favicon-16x16.png">
+       <link rel="manifest" href="Images/Home/site.webmanifest">
+       <link rel="mask-icon" href="Images/Home/safari-pinned-tab.svg" color="#5bbad5">
+       <link rel="shortcut icon" href="Images/Home/favicon.ico">
+       <meta name="msapplication-TileColor" content="#da532c">
+       <meta name="msapplication-config" content="Images/Home/browserconfig.xml">
+       <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <header>    
+            <div class="logo">
+                <a href="index.html"><img src="Images/Logo/beach-paradise2.jpg"></a>
+            </div> 
+           <div class="navM">
+            <nav>
+                <ul class="mainNav">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="Wildlife.html">Wildlife Locations</a></li>
+                    <li><a href="Beaches.html">Beaches</a></li>
+                    <li><a href="Activities.html">Things to do</a></li>
+                    <li><a href="Heritage1.html">Sigiriya</a></li>
+                    <li><a href="Heritage2.html">Anuradhapura</a></li>
+                    <li><a href="Purchase_donate.html">Purchase and Donate</a></li>
+                </ul>
+            </nav>  
+           </div>                        
+    </header>
+
+<div class="ticket">
+    <h1> Book Now</h1>
+    <div class="ticketTypes">
+        <div class="ticketF">
+            <div class="ticketH">
+                <h1>Foreign Pass</h1>
+            </div>
+
+            <div class="ticketP">
+                <p class="ticketC">LKR 5000</p>
+                <p class="ticketCat">Per Adult</p>
+                <br>
+                <p class="ticketC">LKR 2500</p>
+                <p class="ticketCat">Per Child<br>(aged 3 to 12 years)</p>
+                <br>
+                <p class="ticketC">LKR 15000</p>
+                <p class="ticketCat">Annual Pass</p>
+            </div>
+        </div>
+
+        <div class="ticketF">
+            <div class="ticketH">
+                <h1>Local Pass</h1>
+            </div>
+
+            <div class="ticketP">
+                <p class="ticketC">LKR 1000</p>
+                <p class="ticketCat">Per Adult</p>
+                <br>
+                <p class="ticketC">LKR 500</p>
+                <p class="ticketCat">Per Child<br>(aged 3 to 12 years)</p>
+                <br>
+                <p class="ticketC">LKR 4500</p>
+                <p class="ticketCat">Annual Pass</p>
+            </div>
+            
+        </div>  
+    </div>
+    
+    <div align="center">
+        <h3>For children under 3, entrance is free.</h3>
+    </div>
+
+<br>
+
+<form id="act" action="get">
+    <fieldset id="perinfo">
+        <legend>Customer Details</legend>
+        <table>
+            <tr>
+                <td><label for="finame">Full Name</label></td>
+                <td><input type="text" required id="finame" name="finame" size="50" maxlength="75"></td>                
+            </tr>
+
+            <tr>
+                <td><label for="mail">Email</label></td>
+                <td><input type="text" required id="mail" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>                
+            </tr>
+
+            <tr>
+                <td><label for="phone">Contact Number</label></td>
+                <td><input type="tel" required id="phone" pattern="[0-9]{10}"></td>                
+            </tr>
+
+            <tr>
+                <td><label for="cred">Full Name</label></td>
+                <td><input type="date" required id="date" name="date"></td>                
+            </tr>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Booking</legend>
+        <table>
+            <tr>
+                <td><label for="cat">Activity:</label></td>
+                <td><select id="cat" onchange="act()">
+                    <option value="Safari">Safari</option>
+                    <option value="Whale watching">Whale Watching</option>
+                    <option value="Hiking">Hiking</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="typea">Adult:</label></td>
+                <td>
+                    <select id="typea" onchange="act()" name="adult">
+                        <option value="local-a">Local</option>
+                        <option value="international-a">International</option>
+                    </select>
+                </td>
+                <td><label for="noa">No.</label></td>
+                <td><input type="number" id="noa" onchange="act()" name="no-a" value="0" size="15" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td><label for="typea">Children:</label></td>
+                <td>
+                    <select id="typec" onchange="act()" name="children">
+                        <option value="local-c">Local</option>
+                        <option value="international-c">International</option>
+                    </select>
+                </td>
+                <td><label for="noc">No.</label></td>
+                <td><input type="number" id="noc" onchange="act()" name="no-c" value="0" size="15" maxlength="10"></td>
+            </tr>
+
+            <tr>
+                <td><label for="ann">Annual Pass:</label></td>
+                <td>
+                    <select id="ann" onchange="act()" name="ann">
+                        <option value="annual_no">No Annual Pass</option>
+                        <option value="local_a">Local Annual Pass</option>
+                        <option value="international_a">Local Annual Pass</option>
+                    </select>
+                </td>
+                <td><label for="no_a">No.</label></td>
+                <td><input type="number" id="no_a" onchange="act()" name="a-no" value="0" size="15" maxlength="10"></td>
+            </tr>
+
+            <tr>
+                <td><label for="dur">Duration:</label></td>
+                <td>
+                    <select id="dur" onchange="act()">
+                        <option value="3_hours">3 Hours</option>
+                        <option value="half">Half a Day</option>
+                        <option value="full">Full Day</option>
+                    </select>
+                </td>
+                <td><label for="foods">Food Tokens</label></td>
+                <td><input type="number" id="foods" onchange="act()" name="foods" value="0" size="15" maxlength="10"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <p id="temorder"></p>
+    
+
+    <input id="add_order" type="button" value="Add to Order" class="btn" >
+
+    <p id="ord">
+        
+    </p>
+
+    <button id="add_fav" class="btn">Add to Favourite</button>
+    <button id="ord_fav" class="btn">Order Favourite</button>
+    <button id="loy" class="btn">loyalty Points</button>
+    <button id="place-order" class="btn">Place Order</button>
+</form>
+
+</div>
+<div class="footer">
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h2>Contact us</h2>
+                <ul>
+                    <li>Tel      : +94 2696969</li>
+                    <li>email    : ayubowansri@gmail.com</li>
+                    <li>instagram: ayu_sri_</li>
+                    <li>facebook : ayubowansri</li>
+                </ul>               
+            </div>
+            <div>
+                <img src="Images/Logo/beach-paradise2.jpg">
+            </div>
+            <div id="copy">
+                &copy;2022 All Rights Reserved
+            </div>
+        </div>
+    </footer>
+</div> 
+
+<script src="main.js"></script>
+
+    </body>
+</html>
